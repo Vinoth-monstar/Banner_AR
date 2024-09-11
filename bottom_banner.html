@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Bottom Banner</title>
+    <style>
+        /* CSS for the banner */
+        .bottom-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+        }
+
+        /* CSS for circular progress */
+        .circle {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .circle text {
+            font-size: 14px;
+            font-weight: bold;
+            fill: black;
+        }
+
+        .circle-value {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        /* Colors for different nutrients */
+        .carbs .circle svg circle {
+            stroke: #4CAF50;
+        }
+
+        .fat .circle svg circle {
+            stroke: #f44336;
+        }
+
+        .protein .circle svg circle {
+            stroke: #ff9800;
+        }
+
+        .calories .circle svg circle {
+            stroke: #616161;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Content of the page -->
+<div class="bottom-banner">
+    <!-- Carbs Circle -->
+    <div class="carbs">
+        <div class="circle">
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="25" stroke-width="5" fill="none" stroke-dasharray="157" stroke-dashoffset="0"></circle>
+                <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">56%</text>
+            </svg>
+        </div>
+        <div class="circle-value">30.1g</div>
+    </div>
+
+    <!-- Fat Circle -->
+    <div class="fat">
+        <div class="circle">
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="25" stroke-width="5" fill="none" stroke-dasharray="157" stroke-dashoffset="0"></circle>
+                <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">72%</text>
+            </svg>
+        </div>
+        <div class="circle-value">16g</div>
+    </div>
+
+    <!-- Protein Circle -->
+    <div class="protein">
+        <div class="circle">
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="25" stroke-width="5" fill="none" stroke-dasharray="157" stroke-dashoffset="0"></circle>
+                <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">8%</text>
+            </svg>
+        </div>
+        <div class="circle-value">12g</div>
+    </div>
+
+    <!-- Calories Circle -->
+    <div class="calories">
+        <div class="circle">
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="25" stroke-width="5" fill="none" stroke-dasharray="157" stroke-dashoffset="0"></circle>
+                <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">100%</text>
+            </svg>
+        </div>
+        <div class="circle-value">320 KCal</div>
+    </div>
+</div>
+
+</body>
+</html>
