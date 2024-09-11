@@ -12,29 +12,30 @@
             left: 0;
             width: 100%;
             background-color: #fff;
-            padding: 5px 10px;
+            padding: 5px 10px; /* Reduced padding */
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             font-family: Arial, sans-serif;
             height: 161px; /* Max height for the banner */
-            box-sizing: border-box; /* Ensure padding is included in height calculation */
+            box-sizing: border-box;
         }
 
         .banner-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 10px;
-            margin-bottom: 5px;
+            padding: 0;
+            margin-bottom: 5px; /* Reduced margin */
         }
 
         .banner-title {
             font-size: 14px;
             font-weight: bold;
+            margin: 0; /* Removed margin */
         }
 
         .add-to-cart-button {
-            padding: 5px 10px;
+            padding: 4px 8px; /* Reduced padding */
             background-color: #007bff;
             color: white;
             border: none;
@@ -52,12 +53,12 @@
 
         .circle-container {
             text-align: center;
-            width: 60px; /* Adjust width to make circles smaller */
+            width: 50px; /* Adjusted width to reduce overall space */
         }
 
         .circle-title {
             font-size: 12px;
-            margin-bottom: 3px;
+            margin: 2px 0; /* Reduced margins */
             font-weight: bold;
         }
 
@@ -84,7 +85,7 @@
 
         .circle-value {
             text-align: center;
-            margin-top: 4px;
+            margin-top: 2px; /* Reduced margin */
             font-size: 12px; /* Reduced font size */
         }
 
@@ -111,7 +112,7 @@
 <!-- Content of the page -->
 <div class="bottom-banner">
     <div class="banner-header">
-        <div class="banner-title">Pizza Salami</div>
+        <div class="banner-title">Pizza Salami - Nutrition Value</div>
         <button class="add-to-cart-button">Add to Cart</button>
     </div>
     <div class="nutrition-circles">
