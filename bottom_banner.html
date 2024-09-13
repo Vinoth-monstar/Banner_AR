@@ -12,32 +12,47 @@
             left: 0;
             width: 100%;
             background-color: #fff;
-            padding: 10px; /* Uniform padding on all sides */
+            padding: 10px;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             font-family: Arial, sans-serif;
-            height: 161px; /* Max height for the banner */
+            height: 161px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Center content vertically */
+            justify-content: center;
         }
 
         .banner-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 5px; /* Reduced margin */
+            margin-bottom: 5px;
         }
 
         .banner-title {
             font-size: 14px;
             font-weight: bold;
-            margin: 0; /* Removed margin */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kcal-info {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .kcal-icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
         }
 
         .add-to-cart-button {
-            padding: 4px 8px; /* Reduced padding */
+            padding: 4px 8px;
             background-color: #007bff;
             color: white;
             border: none;
@@ -46,7 +61,6 @@
             font-size: 12px;
         }
 
-        /* CSS for the circular progress */
         .nutrition-circles {
             display: flex;
             justify-content: space-around;
@@ -55,19 +69,19 @@
 
         .circle-container {
             text-align: center;
-            width: 50px; /* Adjusted width to reduce overall space */
+            width: 50px;
         }
 
         .circle-title {
             font-size: 12px;
-            margin: 2px 0; /* Reduced margins */
+            margin: 2px 0;
             font-weight: bold;
         }
 
         .circle {
             position: relative;
-            width: 40px; /* Reduced size */
-            height: 40px; /* Reduced size */
+            width: 40px;
+            height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -80,18 +94,17 @@
         }
 
         .circle text {
-            font-size: 10px; /* Reduced font size */
+            font-size: 10px;
             font-weight: bold;
             fill: black;
         }
 
         .circle-value {
             text-align: center;
-            margin-top: 2px; /* Reduced margin */
-            font-size: 12px; /* Reduced font size */
+            margin-top: 2px;
+            font-size: 12px;
         }
 
-        /* Colors for different nutrients */
         .carbs .circle svg circle {
             stroke: #4CAF50;
         }
@@ -114,7 +127,12 @@
 <!-- Content of the page -->
 <div class="bottom-banner">
     <div class="banner-header">
-        <div class="banner-title">Pizza Salami - Nutrition Value</div>
+        <div class="banner-title">
+            Pizza Salami - Nutrition Value
+            <div class="kcal-info" style="margin-top: 8px;">
+                <img src="https://img.icons8.com/ios-filled/50/000000/fire-element.png" alt="Kcal Icon" class="kcal-icon" style="filter: invert(44%) sepia(82%) saturate(3224%) hue-rotate(359deg) brightness(100%) contrast(97%);" />                250 Kcal
+            </div>
+        </div>
         <button class="add-to-cart-button">Add to Cart</button>
     </div>
     <div class="nutrition-circles">
@@ -124,46 +142,46 @@
             <div class="circle">
                 <svg width="40" height="40">
                     <circle cx="20" cy="20" r="18" stroke-width="4" fill="none" stroke-dasharray="113" stroke-dashoffset="0"></circle>
-                    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">56%</text>
+                    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">42.0%</text>
                 </svg>
             </div>
-            <div class="circle-value">30.1g</div>
+            <div class="circle-value">25g</div>
         </div>
 
         <!-- Fat Circle -->
         <div class="circle-container fat">
-            <div class="circle-title">Fat</div>
-            <div class="circle">
-                <svg width="40" height="40">
-                    <circle cx="20" cy="20" r="18" stroke-width="4" fill="none" stroke-dasharray="113" stroke-dashoffset="0"></circle>
-                    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">72%</text>
-                </svg>
-            </div>
-            <div class="circle-value">16g</div>
-        </div>
-
-        <!-- Protein Circle -->
-        <div class="circle-container protein">
             <div class="circle-title">Protein</div>
             <div class="circle">
                 <svg width="40" height="40">
                     <circle cx="20" cy="20" r="18" stroke-width="4" fill="none" stroke-dasharray="113" stroke-dashoffset="0"></circle>
-                    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">8%</text>
+                    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">20.2%</text>
                 </svg>
             </div>
             <div class="circle-value">12g</div>
         </div>
 
+        <!-- Protein Circle -->
+        <div class="circle-container protein">
+            <div class="circle-title">Fat</div>
+            <div class="circle">
+                <svg width="40" height="40">
+                    <circle cx="20" cy="20" r="18" stroke-width="4" fill="none" stroke-dasharray="113" stroke-dashoffset="0"></circle>
+                    <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">37.8%</text>
+                </svg>
+            </div>
+            <div class="circle-value">10g</div>
+        </div>
+
         <!-- Calories Circle -->
         <div class="circle-container calories">
-            <div class="circle-title">Calories</div>
+            <div class="circle-title">Sodium</div>
             <div class="circle">
                 <svg width="40" height="40">
                     <circle cx="20" cy="20" r="18" stroke-width="4" fill="none" stroke-dasharray="113" stroke-dashoffset="0"></circle>
                     <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">100%</text>
                 </svg>
             </div>
-            <div class="circle-value">320 KCal</div>
+            <div class="circle-value">21.7%</div>
         </div>
     </div>
 </div>
